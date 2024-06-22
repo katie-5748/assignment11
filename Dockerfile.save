@@ -1,0 +1,8 @@
+# pull official base image
+FROM node:13.12.0-alpine
+
+# set working directory
+WORKDIR /mcneill_katie_site
+
+# add \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 # pull offic

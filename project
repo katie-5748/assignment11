@@ -1,0 +1,26 @@
+FROM node:14
+ 
+# set working directory
+WORKDIR /mcneill_katie_site
+ 
+# Copy package.json and package-lock.json
+COPY package*.json ./
+ 
+# Install dependencies
+RUN npm install
+ 
+# Copy the source code
+COPY . .
+ 
+# Build the React app
+RUN npm run build
+ 
+# Set the environment variable to serve the built files
+ENV HOST=0.0.0.0
+ENV PORT=7775
+ 
+# Expose the desired port
+EXPOSE 7775
+ 
+# Start the development server
+CMD ["npm", "start"]
